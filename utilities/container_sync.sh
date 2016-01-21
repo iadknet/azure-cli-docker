@@ -17,7 +17,7 @@ for blob in $(diff <(azure storage blob list -a $AZURE_STORAGE_ACCOUNT_DEST -k $
   azure storage blob copy start -q \
   --source-container ${CONTAINER_TO_SYNC} --source-blob $blob --dest-account-name ${AZURE_STORAGE_ACCOUNT_DEST} \
   --dest-container ${CONTAINER_TO_SYNC} \
-  --dest-account-key "${AZURE_STORAGE_DEST_ACCESS_KEY}"
+  --dest-account-key "*************"
 "
   azure storage blob copy start -q \
   --source-container ${CONTAINER_TO_SYNC} --source-blob $blob --dest-account-name ${AZURE_STORAGE_ACCOUNT_DEST} \
